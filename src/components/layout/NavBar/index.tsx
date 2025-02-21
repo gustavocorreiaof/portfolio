@@ -181,7 +181,7 @@ const NavBar: React.FC<NavBarProps> = ({
         </div>
         <div className="titleMinifyed">
           <span>G</span>
-          <span style={{ color: "var(--assets-color)" }}> D</span>
+          <span style={{ color: "var(--assets-color)" }}>C</span>
         </div>
         <div className="left">
           <nav className="navBar">
