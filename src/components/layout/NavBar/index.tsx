@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import MenuSettings from "../../common/menuSettings";
 import DecryptedText from "../../external/decryptedText";
-import "./navBar.css";
+import "./navbar.css";
 import LogoBranca from "/img/white_version.png";
 import LogoPreta from "/img/black_version.png";
 
