@@ -2,6 +2,7 @@ import { Briefcase, Code, Database, Globe, MapPin } from "feather-icons-react";
 import React, { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import AnimatedContent from "../../components/external/animatedContent.tsx";
+import ProjectsSection from "../../components/projectsSection.tsx";
 import "./Home.css";
 import profileImage from "/img/Perfil.png";
 
@@ -84,6 +85,8 @@ const Home: React.FC = () => {
           </div>
         </section>
       </AnimatedContent>
+
+      <ProjectsSection />
     </div>
   );
 };
