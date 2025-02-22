@@ -9,10 +9,14 @@ const AppRoutes: React.FC = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<AppLayout />}>
-          <Route path="/" element={<Navigate to="/Home" />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/About" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>
