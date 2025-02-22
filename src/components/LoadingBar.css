@@ -1,0 +1,88 @@
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #060010 0%, #09001a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.loading-bar {
+  width: 300px;
+  height: 6px;
+  background-color: rgba(123, 44, 191, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(123, 44, 191, 0.5);
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #7b2cbf, #b365f0);
+  width: 0%;
+  animation: progress 2s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(123, 44, 191, 0.8),
+    0 0 25px rgba(179, 101, 240, 0.6);
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.loading-text {
+  color: #b365f0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .loading-bar {
+    width: 200px;
+  }
+
+  .loading-text {
+    font-size: 12px;
+  }
+}
