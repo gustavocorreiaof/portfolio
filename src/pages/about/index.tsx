@@ -10,8 +10,7 @@ function useLang() {
   return useOutletContext<LangContextType>();
 }
 const ClicksCount: React.FC = () => {
-  const [, setOpenMenu] = React.useState(false);
-  const { lang, setLang } = useLang();
+  const { lang } = useLang();
 
   useEffect(() => {}, [lang]);
 

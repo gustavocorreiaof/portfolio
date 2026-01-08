@@ -1,6 +1,6 @@
 import Icon from "feather-icons-react";
 import "./MenuMobile.css";
-import { useEffect, type Dispatch, type SetStateAction } from "react";
+import { useEffect } from "react";
 
 type Language = "en" | "pt";
 

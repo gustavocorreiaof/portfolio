@@ -14,20 +14,9 @@ function useLang() {
   return useOutletContext<LangContextType>();
 }
 const Home: React.FC = () => {
-  const { lang, setLang } = useLang();
+  const { lang } = useLang();
 
   useEffect(() => {}, [lang]);
-
-  const translations = {
-    pt: {
-      h1: "Cole a URL para ser encurtada",
-      p: "Insira sua URL longa e obtenha uma versão curta e fácil de compartilhar",
-    },
-    en: {
-      h1: "Paste the URL to be shortened",
-      p: "Enter your long URL and get a short, easy-to-share version",
-    },
-  };
 
   return (
     <div className="page">
