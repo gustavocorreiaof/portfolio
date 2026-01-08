@@ -1,9 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "DM Serif Text", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
   font-weight: 400;
+
+  /*Fontes*/
+  --fonte-corpo: "Inter", sans-serif;
+
+  /* Cores */
+  --background-color: #060010;
+  --assets-color: #7b2cbf;
+  --borders-color: #3c096c;
+  --second-color: #21043e;
+  --modal-background: #09001a;
+  --font-color: #fff;
+
+  /*Paddings size*/
+  --padding-2xs: 0.5rem;
+  --padding-xs: 0.875rem;
+  --padding-s: 1rem;
+  --padding-m: 1.5rem;
+  --padding-l: 2rem;
+  --padding-xl: 3rem;
+  --padding-2xl: 4rem;
+
+  /*Height*/
+  --height-2xs: 0.5rem;
+  --height-xs: 0.875rem;
+  --height-s: 1rem;
+  --height-m: 1.5rem;
+  --height-l: 2rem;
+  --height-xl: 3rem;
+  --height-2xl: 4rem;
+
+  /*Margins size*/
+  --margin-2xs: 0.5rem;
+  --margin-xs: 0.875rem;
+  --margin-s: 1rem;
+  --margin-m: 1.5rem;
+  --margin-l: 2rem;
+  --margin-xl: 3rem;
+  --margin-2xl: 4rem;
+
+  /*Gaps size*/
+  --gap-xs: 0.5rem;
+  --gap-s: 1rem;
+  --gap-m: 1.5rem;
+  --gapl: 2rem;
+  --gap-xl: 3rem;
+  --gap-2xl: 4rem;
+
+  /*Font Size*/
+  --font-size-xl: 3.75rem;
+  --font-size-l: 2rem;
+  --font-size-m: 1.25rem;
+  --font-size-b: 1rem;
+  --font-size-s: 0.75rem;
+  --font-size-mobile-l: 0.7rem;
+  --font-size-mobile-m: 0.5rem;
+  --font-size-mobile-s: 0.2rem;
+
+  /*Image Size*/
+  --img-size-xs: 3.75rem rem;
+  --img-size-s: 5rem;
+  --img-size-m: 7rem;
+  --img-size-l: 10rem;
+  --img-size-xl: 25rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+}
+
+hr {
+  border: 1px solid var(--borders-color);
 }
 
 * {
   margin: 0;
   padding: 0;
+  color: var(--font-color);
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100vh;
+  box-sizing: border-box;
+  transition: background-color 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.forDarkTheme {
+  --font-color: #fff;
+  --background-color: #060010;
+  --second-color: #21043e;
+  --borders-color: #3c096c;
+  --assets-color: #7b2cbf;
+  --modal-background: #09001a;
+}
+
+.forLightTheme {
+  --font-color: #000;
+  --background-color: #fff;
+  --second-color: #fff;
+  --borders-color: #adb5bd;
+  --assets-color: #a172fd;
+  --modal-background: #ced4da;
 }
