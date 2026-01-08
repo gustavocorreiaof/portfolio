@@ -14,10 +14,10 @@ const Footer: React.FC<FooterProps> = ({ lang }) => {
 
   const translations = {
     en: {
-      p: `${actualYear} URL Shortener. All rights reserved.`,
+      p: `${actualYear} Gustavo Correia Dias. All rights reserved.`,
     },
     pt: {
-      p: `${actualYear} Encurtador de URL. Todos os direitos reservados.`,
+      p: `${actualYear} Gustavo Correia Dias. Todos os direitos reservados.`,
     },
   };
 

@@ -23,6 +23,26 @@ const NavBar: React.FC<NavBarProps> = ({
   setOpenMenuMobile,
 }) => {
   const navigate = useNavigate();
+  const [isDarkTheme, setIsDarkTheme] = React.useState(() => {
+    return !document.body.classList.contains("forLightTheme");
+  });
+
+  useEffect(() => {
+    const updateTheme = () => {
+      const isDark = !document.body.classList.contains("forLightTheme");
+      setIsDarkTheme(isDark);
+    };
+
+    updateTheme();
+
+    const observer = new MutationObserver(updateTheme);
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const translations: Record<
     Language,
@@ -135,7 +155,11 @@ const NavBar: React.FC<NavBarProps> = ({
       <div className="header">
         <div className="right">
           <div className="logo">
-            <img className="logo" src={LogoBranca} alt="Logo" />
+            <img
+              className="logo"
+              src={isDarkTheme ? LogoBranca : LogoPreta}
+              alt="Logo"
+            />
           </div>
 
           <div className="title">
@@ -156,8 +180,8 @@ const NavBar: React.FC<NavBarProps> = ({
           </div>
         </div>
         <div className="titleMinifyed">
-          <span>Url</span>
-          <span style={{ color: "var(--assets-color)" }}> Shortener</span>
+          <span>G</span>
+          <span style={{ color: "var(--assets-color)" }}> D</span>
         </div>
         <div className="left">
           <nav className="navBar">
