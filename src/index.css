@@ -81,7 +81,7 @@
 }
 
 hr {
-  border: 1px solid var(--borders-color);
+  border: 0.1px solid var(--borders-color);
 }
 
 * {

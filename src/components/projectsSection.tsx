@@ -29,7 +29,7 @@ const defaultProjects: Project[] = [
     ],
     technologies: [".NET 8", "React 19", "JavaScript", "PostgreSQL"],
     challenges: [
-      "Deploy em nuvem",
+      "Deploy em nuvem, principalmente utilizando AWS e Railway.",
       "Ser o principal responsável pela arquitetura do sistema, assim como pelo desenvolvimento, equipe de testes e levantamento de requisitos.",
     ],
   },

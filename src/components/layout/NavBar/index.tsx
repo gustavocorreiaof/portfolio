@@ -153,87 +153,88 @@ const NavBar: React.FC<NavBarProps> = ({
         setLang={setLang}
       />
       <div className="header">
-        <div className="right">
-          <div className="logo">
-            <img
-              className="logo"
-              src={isDarkTheme ? LogoBranca : LogoPreta}
-              alt="Logo"
-            />
-          </div>
+        <div className="header-content">
+          <div className="right">
+            <div className="logo">
+              <img
+                className="logo"
+                src={isDarkTheme ? LogoBranca : LogoPreta}
+                alt="Logo"
+              />
+            </div>
 
-          <div className="title">
-            <span className="firstWord">
-              <DecryptedText
-                text={translations[lang].titleNavBar}
-                animateOn="view"
-                revealDirection="center"
-              />
-            </span>{" "}
-            <span className="secondWord">
-              <DecryptedText
-                text={translations[lang].url}
-                animateOn="view"
-                revealDirection="center"
-              />
-            </span>
+            <div className="title">
+              <span className="firstWord">
+                <DecryptedText
+                  text={translations[lang].titleNavBar}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+              </span>{" "}
+              <span className="secondWord">
+                <DecryptedText
+                  text={translations[lang].url}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+              </span>
+            </div>
           </div>
-        </div>
-        <div className="titleMinifyed">
-          <span>G</span>
-          <span style={{ color: "var(--assets-color)" }}>C</span>
-        </div>
-        <div className="left">
-          <nav className="navBar">
-            <NavLink
-              to="/Home"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              end
-              onClick={(e) => handleNavLinkClick(e, "/Home")}
-            >
-              <DecryptedText
-                text={translations[lang].home}
-                animateOn="view"
-                revealDirection="center"
-              />
-            </NavLink>
-            <NavLink
-              to="/About"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={(e) => handleNavLinkClick(e, "/About")}
-            >
-              <DecryptedText
-                text={translations[lang].about}
-                animateOn="view"
-                revealDirection="center"
-              />
-            </NavLink>
+          <div className="titleMinifyed">
+            <span>Miras</span>
+          </div>
+          <div className="left">
+            <nav className="navBar">
+              <NavLink
+                to="/Home"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                end
+                onClick={(e) => handleNavLinkClick(e, "/Home")}
+              >
+                <DecryptedText
+                  text={translations[lang].home}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+              </NavLink>
+              <NavLink
+                to="/About"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={(e) => handleNavLinkClick(e, "/About")}
+              >
+                <DecryptedText
+                  text={translations[lang].about}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+              </NavLink>
 
-            <NavLink
-              to="/Contact"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={(e) => handleNavLinkClick(e, "/Contact")}
-            >
-              <DecryptedText
-                text={translations[lang].contact}
-                animateOn="view"
-                revealDirection="center"
+              <NavLink
+                to="/Contact"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={(e) => handleNavLinkClick(e, "/Contact")}
+              >
+                <DecryptedText
+                  text={translations[lang].contact}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+              </NavLink>
+              <Icon
+                className="icon btn-settings"
+                icon="settings"
+                onClick={() => setOpenMenu(true)}
               />
-            </NavLink>
-            <Icon
-              className="icon btn-settings"
-              icon="settings"
-              onClick={() => setOpenMenu(true)}
-            />
-          </nav>
+            </nav>
+          </div>
+          <Icon
+            onClick={() => {
+              setOpenMenuMobile(true);
+            }}
+            className="icon btn-menu"
+            icon="menu"
+          />
         </div>
-        <Icon
-          onClick={() => {
-            setOpenMenuMobile(true);
-          }}
-          className="icon btn-menu"
-          icon="menu"
-        />
       </div>
       <hr className="divider" />
     </div>
