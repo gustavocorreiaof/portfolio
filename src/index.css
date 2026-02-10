@@ -5,10 +5,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /*Fontes*/
   --fonte-corpo: "Inter", sans-serif;
 
-  /* Cores */
   --background-color: #060010;
   --assets-color: #7b2cbf;
   --borders-color: #3c096c;
@@ -16,7 +14,6 @@
   --modal-background: #09001a;
   --font-color: #fff;
 
-  /*Paddings size*/
   --padding-2xs: 0.5rem;
   --padding-xs: 0.875rem;
   --padding-s: 1rem;
@@ -25,7 +22,6 @@
   --padding-xl: 3rem;
   --padding-2xl: 4rem;
 
-  /*Height*/
   --height-2xs: 0.5rem;
   --height-xs: 0.875rem;
   --height-s: 1rem;
@@ -34,7 +30,6 @@
   --height-xl: 3rem;
   --height-2xl: 4rem;
 
-  /*Margins size*/
   --margin-2xs: 0.5rem;
   --margin-xs: 0.875rem;
   --margin-s: 1rem;
@@ -43,7 +38,6 @@
   --margin-xl: 3rem;
   --margin-2xl: 4rem;
 
-  /*Gaps size*/
   --gap-xs: 0.5rem;
   --gap-s: 1rem;
   --gap-m: 1.5rem;
@@ -51,7 +45,6 @@
   --gap-xl: 3rem;
   --gap-2xl: 4rem;
 
-  /*Font Size*/
   --font-size-xl: 3.75rem;
   --font-size-l: 2rem;
   --font-size-m: 1.25rem;
@@ -61,7 +54,6 @@
   --font-size-mobile-m: 0.5rem;
   --font-size-mobile-s: 0.2rem;
 
-  /*Image Size*/
   --img-size-xs: 3.75rem rem;
   --img-size-s: 5rem;
   --img-size-m: 7rem;
@@ -124,7 +116,7 @@ body {
   --background-color: #fff;
   --second-color: #fff;
   --borders-color: #adb5bd;
-  --assets-color: #6c757d;
+  --assets-color: #adb5bd;
   --modal-background: #ced4da;
   --text-primary: #000000;
   --text-secondary: #333333;
