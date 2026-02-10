@@ -28,6 +28,7 @@ const Home: React.FC = () => {
       dotnetExpert: "Especialista em .NET",
       fluentEnglish: "Inglês Avançado - B2",
       databases: "Bancos Relacionais e NoSQL",
+      located: "Ceará, Brasil",
     },
     en: {
       job: "FullStack Developer - Função Sistemas",
@@ -35,6 +36,7 @@ const Home: React.FC = () => {
       dotnetExpert: ".NET Expert",
       fluentEnglish: "Advanced English - B2",
       databases: "Relational and NoSQL Databases",
+      located: "Ceará, Brazil",
     },
   };
 
@@ -59,7 +61,13 @@ const Home: React.FC = () => {
             <div className="info-cards">
               <div className="info-card">
                 <MapPin size={24} className="card-icon" />
-                <span className="card-value">Ceará, Brazil</span>
+                <span className="card-value">
+                  <DecryptedText
+                    text={translations[lang].located}
+                    animateOn="view"
+                    revealDirection="center"
+                  />
+                </span>
               </div>
               <div className="info-card">
                 <Briefcase size={24} className="card-icon" />

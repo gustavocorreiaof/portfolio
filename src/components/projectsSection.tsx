@@ -74,7 +74,7 @@ const defaultProjects: Project[] = [
       "Deploy em nuvem, principalmente utilizando AWS e Railway.",
       "Ser o principal responsável pela arquitetura do sistema, assim como pelo desenvolvimento, equipe de testes e levantamento de requisitos.",
     ],
-    link: "https://licenciar-ui.vercel.app/",
+    link: "https://www.licenciar-nova-russas.com.br/",
   },
   {
     id: "2",

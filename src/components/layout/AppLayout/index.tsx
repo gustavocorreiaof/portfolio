@@ -3,6 +3,7 @@ import NavBar from "../NavBar";
 import Footer from "../footer";
 import { useState } from "react";
 import MenuMobile from "../menuMobile";
+import ScrollToTopButton from "../../ScrollToTopButton";
 
 type Language = "pt" | "en";
 
@@ -29,6 +30,7 @@ const AppLayout: React.FC = () => {
         setOpenMenu={setOpenMenuMobile}
         openMenu={openMenuMobile}
       />
+      <ScrollToTopButton />
     </div>
   );
 };
