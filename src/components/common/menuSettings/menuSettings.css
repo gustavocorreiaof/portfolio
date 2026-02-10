@@ -1,0 +1,162 @@
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  z-index: 1999;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menuSettings {
+  width: 35vw;
+  height: auto;
+  background-color: var(--modal-background);
+  border: 1px solid var(--borders-color);
+  border-radius: 10px;
+  position: absolute;
+  top: 65px;
+  right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+  max-width: 50vh;
+  min-width: 19.125rem;
+}
+
+.menuSettings h3 {
+  padding: var(--padding-2xs) var(--padding-m);
+}
+
+.menuSettings.open {
+  display: block;
+  animation: popUp 0.15s ease forwards;
+}
+
+.menu-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.theme-area {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--borders-color);
+  display: flex;
+  gap: var(--gap-2xs);
+  margin-right: var(--margin-xs);
+  z-index: 1;
+  position: relative;
+}
+
+.theme-area .icon,
+.line__right .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+.theme-div {
+  padding: 0.2rem var(--padding-m);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+.indicatorTheme,
+.indicatorLang {
+  width: 4.25em;
+  height: 1.65em;
+  border-radius: 5px;
+  background-color: var(--assets-color);
+  position: absolute;
+  z-index: 2;
+  left: 8px;
+}
+
+.indicatorTheme {
+  animation: slideLeft 0.3s;
+}
+
+.indicatorTheme.dark {
+  left: 76px;
+  animation: slideRight 0.3s;
+}
+
+.indicatorLang {
+  animation: slideLeft 0.3s;
+}
+
+.indicatorLang.en {
+  left: 76px;
+  animation: slideRight 0.3s;
+}
+
+.theme-div:hover {
+  cursor: pointer;
+}
+
+.line__right {
+  display: flex;
+  align-items: center;
+  padding: var(--padding-s);
+  gap: var(--gap-s);
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) translateX(10px) scale(0.85);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    left: 2px;
+  }
+  90% {
+    left: 82px;
+  }
+  100% {
+    left: 76px;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    left: 82px;
+  }
+  90% {
+    left: 2px;
+  }
+  100% {
+    left: 8px;
+  }
+}

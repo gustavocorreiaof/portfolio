@@ -1,0 +1,69 @@
+.menu-mobile-overlay.show .modal-menu-content,
+.menu-mobile-overlay.show {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  z-index: 1999;
+}
+
+.modal-menu-content {
+  background-color: var(--modal-background);
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  padding-top: var(--padding-l);
+  opacity: 0;
+  transition: all 0.3s ease;
+  bottom: 0;
+  position: fixed;
+  transform: translate(0, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-menu-content hr {
+  width: 100%;
+  color: var(--second-color);
+}
+
+.modal-menu-content ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.modal-menu-content li {
+  margin: 1rem 0;
+}
+
+.modal-menu-content a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.modal-menu-content .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: var(--margin-2xs);
+  margin-left: var(--margin-s);
+  top: 0.35rem;
+  position: relative;
+}

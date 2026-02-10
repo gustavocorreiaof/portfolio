@@ -1,0 +1,162 @@
+.book-card {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--second-color);
+  border-radius: 16px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+  flex-shrink: 0;
+  width: 180px;
+  height: 270px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0.5rem;
+}
+
+.book-title {
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.book-description {
+  font-size: var(--font-size-s);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.book-progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+
+.book-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-progress-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.book-progress-pages {
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.book-progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.book-progress-fill {
+  height: 100%;
+  background: #9d4edd;
+  border-radius: 5px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 8px rgba(157, 78, 221, 0.3);
+}
+
+.forLightTheme .book-progress-fill {
+  background: #6c757d;
+  box-shadow: 0 0 8px rgba(108, 117, 125, 0.3);
+}
+
+.book-actions {
+  margin-top: auto;
+}
+
+.book-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  padding: var(--padding-s) var(--padding-m);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.forLightTheme .book-button {
+  background: #6c757d;
+}
+
+.book-button:hover:not(:disabled) {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.book-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.book-button-disabled {
+  background-color: var(--assets-color);
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-cover {
+    width: 150px;
+    height: 225px;
+  }
+
+  .book-progress-header {
+    flex-direction: column;
+    gap: var(--gap-xs);
+  }
+
+  .book-actions {
+    display: flex;
+    justify-content: center;
+  }
+}
