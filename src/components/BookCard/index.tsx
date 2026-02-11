@@ -1,4 +1,5 @@
 import React from "react";
+import DecryptedText from "../external/decryptedText.tsx";
 import "./bookCard.css";
 
 export interface BookCardProps {
@@ -38,13 +39,31 @@ const BookCard: React.FC<BookCardProps> = ({
       </div>
 
       <div className="book-content">
-        <h3 className="book-title">{title}</h3>
+        <h3 className="book-title">
+          <DecryptedText
+            text={title}
+            animateOn="view"
+            revealDirection="center"
+          />
+        </h3>
 
-        <p className="book-description">{description}</p>
+        <p className="book-description">
+          <DecryptedText
+            text={description}
+            animateOn="view"
+            revealDirection="center"
+          />
+        </p>
 
         <div className="book-progress-container">
           <div className="book-progress-header">
-            <span className="book-progress-label">{translations.progress}</span>
+            <span className="book-progress-label">
+              <DecryptedText
+                text={translations.progress}
+                animateOn="view"
+                revealDirection="center"
+              />
+            </span>
             <span className="book-progress-pages">
               {pagesRead}/{totalPages}
             </span>
@@ -65,7 +84,11 @@ const BookCard: React.FC<BookCardProps> = ({
               rel="noopener noreferrer"
               className="book-button"
             >
-              {translations.readAnalysis}
+              <DecryptedText
+                text={translations.readAnalysis}
+                animateOn="view"
+                revealDirection="center"
+              />
             </a>
           ) : (
             <button
@@ -73,7 +96,11 @@ const BookCard: React.FC<BookCardProps> = ({
               disabled
               title={!isComplete ? "Análise em breve" : ""}
             >
-              {translations.readAnalysis}
+              <DecryptedText
+                text={translations.readAnalysis}
+                animateOn="view"
+                revealDirection="center"
+              />
             </button>
           )}
         </div>

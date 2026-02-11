@@ -101,6 +101,7 @@ const Contact: React.FC = () => {
       emailCopied: "Copiado para área de transferência :)",
       whatsappMessage: "Ou se preferir manda um zap",
       socialTitle: "Ou me encontre por aqui",
+      contactCard: "Contato",
     },
     en: {
       title: "Let's talk?",
@@ -109,6 +110,7 @@ const Contact: React.FC = () => {
       emailCopied: "Copied to clipboard :)",
       whatsappMessage: "Or if you prefer, send a message",
       socialTitle: "Or find me here",
+      contactCard: "Contact",
     },
   };
 
@@ -156,7 +158,13 @@ const Contact: React.FC = () => {
           <div className="contact-header">
             <div className="info-card">
               <Mail size={24} className="card-icon" />
-              <span className="card-value">Contato</span>
+              <span className="card-value">
+                <DecryptedText
+                  text={translations[lang].contactCard}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+              </span>
             </div>
 
             <h1 className="contact-title">
@@ -193,7 +201,11 @@ const Contact: React.FC = () => {
                 </div>
 
                 <p className="whatsapp-message">
-                  {translations[lang].whatsappMessage}
+                  <DecryptedText
+                    text={translations[lang].whatsappMessage}
+                    animateOn="view"
+                    revealDirection="center"
+                  />
                 </p>
 
                 <div
@@ -217,7 +229,13 @@ const Contact: React.FC = () => {
 
           <hr className="social-divider" />
 
-          <h3 className="social-title">{translations[lang].socialTitle}</h3>
+          <h3 className="social-title">
+            <DecryptedText
+              text={translations[lang].socialTitle}
+              animateOn="view"
+              revealDirection="center"
+            />
+          </h3>
 
           <div className="social-cards">
             <a

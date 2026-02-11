@@ -1,6 +1,7 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
 import AnimatedContent from "../../components/external/animatedContent";
+import DecryptedText from "../../components/external/decryptedText.tsx";
 import BookCard from "../../components/BookCard";
 import "./books.css";
 
@@ -77,8 +78,20 @@ const Books: React.FC = () => {
       >
         <div className="books-page">
           <header className="books-header">
-            <h1 className="books-title">{translations[lang].title}</h1>
-            <p className="books-subtitle">{translations[lang].subtitle}</p>
+            <h1 className="books-title">
+              <DecryptedText
+                text={translations[lang].title}
+                animateOn="view"
+                revealDirection="center"
+              />
+            </h1>
+            <p className="books-subtitle">
+              <DecryptedText
+                text={translations[lang].subtitle}
+                animateOn="view"
+                revealDirection="center"
+              />
+            </p>
           </header>
 
           <div className="books-list">

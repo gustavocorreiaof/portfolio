@@ -4,14 +4,14 @@
   right: 30px;
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border: none;
+  background: var(--assets-color);
+  border: 2px solid var(--assets-color);
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(123, 44, 191, 0.4);
   z-index: 1000;
   transition: all 0.3s ease;
   animation: fadeIn 0.3s ease-in-out;
@@ -19,8 +19,9 @@
 
 .scroll-to-top-button:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  box-shadow: 0 6px 20px rgba(123, 44, 191, 0.6);
+  background: var(--second-color);
+  border-color: var(--text-primary);
 }
 
 .scroll-to-top-button:active {

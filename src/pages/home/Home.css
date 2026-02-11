@@ -44,7 +44,6 @@
   }
 }
 
-/* Home Section Styles */
 .home-section {
   display: flex;
   justify-content: space-between;
@@ -255,7 +254,6 @@
   opacity: 0.5;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .home-section {
     flex-direction: column;
@@ -264,11 +262,22 @@
 
   .home-right {
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .profile-image {
+    max-width: 350px;
   }
 
   .profile-image-wrapper {
     max-width: 350px;
     margin: 0 auto;
+  }
+
+  .image-backdrop,
+  .image-backdrop-2 {
+    display: none;
   }
 }
 
@@ -295,36 +304,8 @@
 @media (max-width: 768px) {
   .home-section {
     width: 95%;
-    padding: 1.5rem;
-    gap: 2rem;
-  }
-
-  .home-left {
-    gap: 1.5rem;
-  }
-
-  .profile-name {
-    font-size: 2.2rem;
-  }
-
-  .profile-bio {
-    max-width: 100%;
-  }
-
-  .profile-image-wrapper {
-    max-width: 280px;
-    margin: 0 auto;
-  }
-
-  .skills-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .home-section {
     padding: 0;
-    gap: 1.5rem;
+    gap: 3rem;
   }
 
   .home-left {
@@ -332,6 +313,8 @@
   }
 
   .info-cards {
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 
@@ -349,12 +332,14 @@
     font-size: 0.65rem;
   }
 
-  .profile-bio {
-    text-align: center;
-  }
-
   .profile-name {
     font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .profile-bio {
+    max-width: 100%;
     text-align: center;
   }
 
@@ -373,21 +358,22 @@
   }
 
   .skills-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 0.75rem;
     max-width: 100%;
+    margin-top: 1rem;
   }
 
   .skill-card {
-    padding: 0.5rem 0.35rem;
+    padding: 1rem 0.75rem;
   }
 
   .skill-text {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
   }
 
   .skill-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 }

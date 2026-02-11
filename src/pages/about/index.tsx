@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
+import DecryptedText from "../../components/external/decryptedText.tsx";
 import WorkExperience from "../../components/WorkExperience";
 import "./about.css";
 
@@ -136,11 +137,21 @@ const About: React.FC = () => {
   return (
     <div className="page about-page">
       <div className="about-container">
-        <h1 className="about-title">{translations[lang].title}</h1>
+        <h1 className="about-title">
+          <DecryptedText
+            text={translations[lang].title}
+            animateOn="view"
+            revealDirection="center"
+          />
+        </h1>
 
         <section className="experience-section">
           <h2 className="section-title">
-            {translations[lang].experienceTitle}
+            <DecryptedText
+              text={translations[lang].experienceTitle}
+              animateOn="view"
+              revealDirection="center"
+            />
           </h2>
 
           <WorkExperience
