@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../NavBar";
-import Footer from "../footer";
+import Footer from "../Footer";
 import { useState } from "react";
-import MenuMobile from "../menuMobile";
+import MenuMobile from "../MenuMobile";
 import ScrollToTopButton from "../../ScrollToTopButton";
 
 type Language = "pt" | "en";

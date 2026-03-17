@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import AnimatedContent from "../../components/external/animatedContent.tsx";
 import DecryptedText from "../../components/external/decryptedText.tsx";
-import ProjectsSection from "../../components/projectsSection.tsx";
+import ProjectsSection from "../../components/ProjectsSection/projectsSection";
 import "./Home.css";
 import profileImage from "/img/Perfil.png";
 

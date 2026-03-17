@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import AppRoutes from "./routes";
-import LoadingBar from "./components/LoadingBar";
+import LoadingBar from "./components/LoadingBar/LoadingBar";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

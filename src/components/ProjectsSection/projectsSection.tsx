@@ -1,7 +1,7 @@
 import React from "react";
-import AnimatedContent from "./external/animatedContent";
-import DecryptedText from "./external/decryptedText";
-import ProjectCard from "./projectCard";
+import AnimatedContent from "../external/animatedContent";
+import DecryptedText from "../external/decryptedText";
+import ProjectCard from "../ProjectCard/projectCard";
 import "./projectsSection.css";
 
 interface Project {

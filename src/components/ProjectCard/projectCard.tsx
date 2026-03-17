@@ -1,5 +1,5 @@
 import React from "react";
-import DecryptedText from "./external/decryptedText";
+import DecryptedText from "../external/decryptedText";
 import "./projectCard.css";
 
 interface ProjectCardProps {
