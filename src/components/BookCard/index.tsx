@@ -8,10 +8,8 @@ export interface BookCardProps {
   coverImage: string;
   pagesRead: number;
   totalPages: number;
-  analysisUrl?: string;
   translations?: {
     progress: string;
-    readAnalysis: string;
   };
 }
 
@@ -21,16 +19,11 @@ const BookCard: React.FC<BookCardProps> = ({
   coverImage,
   pagesRead,
   totalPages,
-  analysisUrl,
   translations = {
     progress: "Progresso de Leitura",
-    readAnalysis: "Ler Análise",
   },
 }) => {
   const progressPercentage = Math.min((pagesRead / totalPages) * 100, 100);
-  const isComplete = progressPercentage >= 100;
-  const hasAnalysis = !!analysisUrl;
-  const canReadAnalysis = isComplete && hasAnalysis;
 
   return (
     <div className="book-card">
@@ -76,34 +69,7 @@ const BookCard: React.FC<BookCardProps> = ({
           </div>
         </div>
 
-        <div className="book-actions">
-          {canReadAnalysis ? (
-            <a
-              href={analysisUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="book-button"
-            >
-              <DecryptedText
-                text={translations.readAnalysis}
-                animateOn="view"
-                revealDirection="center"
-              />
-            </a>
-          ) : (
-            <button
-              className="book-button book-button-disabled"
-              disabled
-              title={!isComplete ? "Análise em breve" : ""}
-            >
-              <DecryptedText
-                text={translations.readAnalysis}
-                animateOn="view"
-                revealDirection="center"
-              />
-            </button>
-          )}
-        </div>
+
       </div>
     </div>
   );

@@ -25,7 +25,51 @@
 .books-list {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-l);
+  gap: var(--gap-2xl);
+}
+
+.books-divider {
+  border: none;
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
+  margin: var(--margin-2xl) 0;
+}
+
+.courses-section {
+  text-align: center;
+  padding-bottom: var(--padding-xl);
+}
+
+.courses-title {
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--margin-m) 0;
+}
+
+.courses-message {
+  font-size: var(--font-size-m);
+  color: var(--text-secondary);
+  margin: 0 0 var(--margin-l) 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.courses-link {
+  display: inline-block;
+  padding: var(--padding-xs) var(--padding-l);
+  border: 1px solid var(--accent-color, #0a66c2);
+  border-radius: 6px;
+  color: var(--accent-color, #0a66c2);
+  text-decoration: none;
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.courses-link:hover {
+  background-color: var(--accent-color, #0a66c2);
+  color: #fff;
 }
 
 @media (max-width: 768px) {
