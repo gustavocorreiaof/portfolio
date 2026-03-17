@@ -34,10 +34,14 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   onComplete,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // Prevent re-animation if already completed (e.g. React Strict Mode double-invoke)
+    if (hasAnimated.current) return;
 
     const axis = direction === "horizontal" ? "x" : "y";
     const offset = reverse ? -distance : distance;
@@ -49,24 +53,28 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
       opacity: animateOpacity ? initialOpacity : 1,
     });
 
-    gsap.to(el, {
-      [axis]: 0,
-      scale: 1,
-      opacity: 1,
-      duration,
-      ease,
-      delay,
-      onComplete,
-      scrollTrigger: {
-        trigger: el,
-        start: `top ${startPct}%`,
-        toggleActions: "play none none none",
-        once: true,
+    const trigger = ScrollTrigger.create({
+      trigger: el,
+      start: `top ${startPct}%`,
+      once: true,
+      onEnter: () => {
+        gsap.to(el, {
+          [axis]: 0,
+          scale: 1,
+          opacity: 1,
+          duration,
+          ease,
+          delay,
+          onComplete: () => {
+            hasAnimated.current = true;
+            onComplete?.();
+          },
+        });
       },
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach((t: { kill: () => void }) => t.kill());
+      trigger.kill();
       gsap.killTweensOf(el);
     };
   }, [
