@@ -1,5 +1,5 @@
 import Icon from "feather-icons-react";
-import "./MenuMobile.css";
+import "./menuMobile.css";
 import { useEffect } from "react";
 
 type Language = "en" | "pt";
