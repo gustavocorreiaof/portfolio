@@ -51,6 +51,7 @@ const NavBar: React.FC<NavBarProps> = ({
       home: string;
       contact: string;
       about: string;
+      stacks: string;
       books: string;
       url: string;
     }
@@ -58,7 +59,8 @@ const NavBar: React.FC<NavBarProps> = ({
     pt: {
       titleNavBar: "Gustavo",
       home: "Inicio",
-      about: "Sobre",
+      about: "Carreira",
+      stacks: "Stacks",
       contact: "Contato",
       books: "Livros",
       url: "Correia",
@@ -66,7 +68,8 @@ const NavBar: React.FC<NavBarProps> = ({
     en: {
       titleNavBar: "Gustavo",
       home: "Home",
-      about: "About",
+      about: "Career",
+      stacks: "Stacks",
       contact: "Contact",
       books: "Books",
       url: "Correia",
@@ -75,9 +78,10 @@ const NavBar: React.FC<NavBarProps> = ({
 
   const routes = [
     { page: "Home", path: "/Home", value: 0 },
-    { page: "Sobre", path: "/About", value: 1 },
+    { page: "Carreira", path: "/Career", value: 1 },
     { page: "Livros", path: "/Books", value: 2 },
-    { page: "Settings", path: "/Contact", value: 3 },
+    { page: "Contato", path: "/Contact", value: 3 },
+    { page: "Stacks", path: "/Stacks", value: 4 },
   ];
 
   const location = useLocation();
@@ -136,8 +140,7 @@ const NavBar: React.FC<NavBarProps> = ({
       itemToAnimate.classList.add("removing");
 
       setTimeout(() => {
-        itemToAnimate.classList.add(classToAdd);
-        itemToAnimate.classList.remove("removing");
+        itemToAnimate.classList.remove("active", "removing", classToAdd);
 
         navigate(path);
       }, 300);
@@ -202,9 +205,9 @@ const NavBar: React.FC<NavBarProps> = ({
                 />
               </NavLink>
               <NavLink
-                to="/About"
+                to="/Career"
                 className={({ isActive }) => (isActive ? "active" : "")}
-                onClick={(e) => handleNavLinkClick(e, "/About")}
+                onClick={(e) => handleNavLinkClick(e, "/Career")}
               >
                 <DecryptedText
                   text={translations[lang].about}
@@ -223,7 +226,7 @@ const NavBar: React.FC<NavBarProps> = ({
                   animateOn="view"
                   revealDirection="center"
                 />
-              </NavLink>
+              </NavLink>              
 
               <NavLink
                 to="/Contact"
@@ -232,6 +235,18 @@ const NavBar: React.FC<NavBarProps> = ({
               >
                 <DecryptedText
                   text={translations[lang].contact}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+              </NavLink>
+
+              <NavLink
+                to="/Stacks"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={(e) => handleNavLinkClick(e, "/Stacks")}
+              >
+                <DecryptedText
+                  text={translations[lang].stacks}
                   animateOn="view"
                   revealDirection="center"
                 />

@@ -31,13 +31,15 @@ const MenuMobile: React.FC<MenuMobileProps> = ({
   const translate = {
     pt: {
       homePage: "Página Inicial",
-      about: "Sobre",
+      about: "Carreira",
+      stacks: "Stacks",
       books: "Livros",
       contact: "Contato",
     },
     en: {
       homePage: "Home Page",
-      about: "About",
+      about: "Career",
+      stacks: "Stacks",
       books: "Books",
       contact: "Contact",
     },
@@ -58,11 +60,15 @@ const MenuMobile: React.FC<MenuMobileProps> = ({
           </li>
           <li>
             <Icon className="icon" icon="activity" />
-            <a href="/About">{translate[lang].about}</a>
+            <a href="/Career">{translate[lang].about}</a>
           </li>
           <li>
             <Icon className="icon" icon="book" />
             <a href="/Books">{translate[lang].books}</a>
+          </li>
+          <li>
+            <Icon className="icon" icon="layers" />
+            <a href="/Stacks">{translate[lang].stacks}</a>
           </li>
           <li>
             <Icon className="icon" icon="phone" />

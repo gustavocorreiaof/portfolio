@@ -22,7 +22,7 @@ const About: React.FC = () => {
   const translations = {
     en: {
       title: "About Me",
-      experienceTitle: "Professional Experience",
+      experienceTitle: "Career",
       funcaoSistemasDescription: [
         {
           type: "paragraph" as const,
@@ -76,7 +76,7 @@ const About: React.FC = () => {
     },
     pt: {
       title: "Sobre Mim",
-      experienceTitle: "Experiência Profissional",
+      experienceTitle: "Carreira",
       funcaoSistemasDescription: [
         {
           type: "paragraph" as const,
@@ -137,14 +137,6 @@ const About: React.FC = () => {
   return (
     <div className="page about-page">
       <div className="about-container">
-        <h1 className="about-title">
-          <DecryptedText
-            text={translations[lang].title}
-            animateOn="view"
-            revealDirection="center"
-          />
-        </h1>
-
         <section className="experience-section">
           <h2 className="section-title">
             <DecryptedText

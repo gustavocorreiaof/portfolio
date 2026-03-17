@@ -3,6 +3,7 @@ import Home from "../pages/home";
 import About from "../pages/about";
 import Contact from "../pages/contact";
 import Books from "../pages/books";
+import Stacks from "../pages/stacks";
 import AppLayout from "../components/layout/AppLayout";
 
 const AppRoutes: React.FC = () => {
@@ -11,7 +12,8 @@ const AppRoutes: React.FC = () => {
       <Routes>
         <Route element={<AppLayout />}>
           <Route path="/Home" element={<Home />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/Career" element={<About />} />
+          <Route path="/Stacks" element={<Stacks />} />
           <Route path="/Books" element={<Books />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/Home" replace />} />
