@@ -6,6 +6,7 @@ import DecryptedText from "../../components/external/decryptedText.tsx";
 import ProjectsSection from "../../components/ProjectsSection/projectsSection";
 import "./Home.css";
 import profileImage from "/img/Perfil.png";
+import profileImage2 from "/img/perfil2.jpg";
 
 type Language = "en" | "pt";
 
@@ -123,13 +124,28 @@ const Home: React.FC = () => {
           </div>
 
           <div className="home-right">
-            <div className="image-backdrop-2"></div>
-            <div className="image-backdrop"></div>
-            <img
-              src={profileImage}
-              alt="Gustavo Correia"
-              className="profile-image"
-            />
+            <div className="float-y">
+              <div className="float-x">
+                <div className="profile-flip-card">
+                  <div className="profile-flip-inner">
+                    <div className="profile-flip-front">
+                      <img
+                        src={profileImage}
+                        alt="Gustavo Correia"
+                        className="profile-image"
+                      />
+                    </div>
+                    <div className="profile-flip-back">
+                      <img
+                        src={profileImage2}
+                        alt="Gustavo Correia"
+                        className="profile-image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </AnimatedContent>
