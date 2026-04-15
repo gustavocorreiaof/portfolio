@@ -1,12 +1,12 @@
 .about-page {
   min-height: 100vh;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 
 .about-title {
@@ -57,11 +57,11 @@
 
 @media (max-width: 768px) {
   .about-page {
-    padding: 1rem;
+    padding: 0;
   }
 
   .about-container {
-    padding: 1rem 0;
+    padding: 1rem;
   }
 
   .about-title {
